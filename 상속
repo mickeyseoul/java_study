@@ -1,0 +1,21 @@
+public class EX06_01_상속 {
+
+	public static void main(String[] args) {
+		Sports s1 = new Sports(); //야구, 9
+		Sports s2 = new Sports("축구",11);
+		
+		s1.display();
+		System.out.println();
+		s2.display();
+		System.out.println();
+		
+		Baseball bb = new Baseball("야구",5,0.345);
+		bb.display(); // 자식과 부모의 메서드가 완전히 일치 할 경우 오버라이딩(overriding) -> 자식 클래스 매서드 출력
+		System.out.println();
+		
+		Football fb = new Football("축구",7,3);
+		fb.display();
+
+	}
+
+}
