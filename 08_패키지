@@ -17,8 +17,8 @@ equalsIgnoreCase(String anotherString)  대소문자 구분없이 비교
 contains(String st)  찾는 문자 존재하는지 boolean 리턴
 indexOf(String str)  찾는 문자 index번호로 알려줌 / 없으면 -1 리턴
 
-ex)
-String fullName = "Hello.java";
+		ex)
+		String fullName = "Hello.java";
 		String fileName;
 		String ext;
 		
