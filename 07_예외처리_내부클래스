@@ -1,1 +1,54 @@
+▶에러와 예외의 차이
+에러(error): 하드웨어의 오작동 또는 고장으로 인해 응용프로그램 실행 오류/프로그램 코드에 의해서 수습할 수 없는 심각한 오류 ex)메모리 부족
+예외(exception): 사용자의 잘못된 조작 또는 개발자의 잘못된 코딩으로 인해 발생하는 프로그램 오류/수습될 수 있는 다소 미약한 오류
+
+
+▶java.length.Exeption 모든 예외클래스들을 상속함
+
+일반예외: 컴파일러가 체크 해줌 ex)오타, 데이터타입 미스매치
+실행예외: java.length.RuntimeException을 상속받는 예외들
+
+
+▶실행예외 종류들
+NullPointerException  객체가 없는 상태(null)에서 객체를 사용하려 할때
+ArrayIndexOutOfBoundsException 
+ArithMathicException
+
+
+▶예외 처리 코드: 프로그램의 갑작스러운 종료를 막고, 정상 실행을 유지할 수 있도록 처리하는 코드
+try - catch - finally //finally는 항상 실행
+
+try{
+  String s = null;
+  System.out.println(s.toString()); //new NullPointerException 객체 생성됨
+}catch(NullPointerException e){
+  System.out.println("예외 발생")
+}
+
+
+▶
+e.getMessage();  / by zero
+e.toString();  java.lang.ArithmeticException: / by zero
+
+
+▶익명클래스: 1회적으로 클래스,인터페이스의 메서드를 변경해서 사용하고 싶을때 사용
+ex)01
+new Inner1() {  //참조변수 없이 객체 생성. 익명클래스
+	void display() {
+	System.out.println("x:"+x*x*x);
+	}
+}.display();  //바로 사용
+
+ex)02
+RemoteControl rc = new RemoteControl() {  //인터페이스 객체 생성
+	public void turnOn() {
+		System.out.println("TV를 켠다.");  //인터페이스의 추상 메서드 정의
+	}
+	public void turnOff() {
+		System.out.println("TV를 끈다.");
+	}
+};  //객체생성 끝
+		
+rc.turnOn();
+rc.turnOff();
 
