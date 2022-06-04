@@ -1,4 +1,8 @@
-▶java.lang 패키지  *임포트 필요없음
+▶자바 API Application Programming Interface:
+프로그램 개발에 자주 사용되는 클래스 및 인터페이스 모음 / 라이브러리
+
+
+▶java.lang 패키지: 가장 기본적인   *임포트 필요없음
 
 Object 클래스: 모든 클래스를 상속함
 toString(): 참조변수의 객체 번지 리턴/ 클래스에 자주쓰는 문자열 오버라이딩 해놓아서 편하게 String타입 리턴 가능
@@ -61,7 +65,7 @@ Math 클래스
 int i = (int)(Math.random()*41)+5;  5~45사이의 난수를 리턴 / (45-5+1)+5
 
 
-▶java.util 패키지
+▶java.util 패키지: 조미료 역할
 
 Stringtokenizer  구분자
 
@@ -80,8 +84,7 @@ String[] week = {"","일","월","화","수","목","금","토","일"};
 System.out.println(week[cal.get(Calendar.DAY_OF_WEEK)]+"요일");  //일요일이 1
 
 
-▶java.text 패키지
-Date 패키지와 SimpleDateFormat 패키지
+▶Date 클래스와 SimpleDateFormat 클래스(java.text 패키지)
 Date now = new Date();
 System.out.println(now); //오버라이딩된 toString() 현재 날짜와 시간 정보 리턴
 
