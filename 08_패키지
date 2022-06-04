@@ -62,7 +62,9 @@ int i = (int)(Math.random()*41)+5;  5~45사이의 난수를 리턴 / (45-5+1)+5
 
 
 ▶java.util 패키지
-Stringtokenizer
+
+Stringtokenizer  구분자
+
 
 Calendar
 Calendar cal = Calendar.getInstance();  //static getInstance()를 통해 객체 생성 
