@@ -14,8 +14,23 @@ toString()  Object 클래스 메서드에 오버라이딩되어 문자열 리턴
 length()
 equalsIgnoreCase(String anotherString)  대소문자 구분없이 비교
 
+contains(String st)  찾는 문자 존재하는지 boolean 리턴
 indexOf(String str)  찾는 문자 index번호로 알려줌 / 없으면 -1 리턴
-contains(String st)  찾는 문자 존재하는지 boolean
+
+ex)
+String fullName = "Hello.java";
+		String fileName;
+		String ext;
+		
+		int index = fullName.indexOf('.'); //5
+		fileName = fullName.substring(0, index);
+		ext = fullName.substring(index+1);
+		
+		System.out.println("fileName:"+fileName);
+		System.out.println("ext:"+ext);
+		
+		String id = "kim";
+		String pw = "1234";
 
 subString(int beginIndex, int endIndex)  beginIndex부터 endIndex전까지 문자열 리턴 beginIndex<= s <endIndex
 subString(int beginIndex)  beginIndex부터 문자열 리턴
