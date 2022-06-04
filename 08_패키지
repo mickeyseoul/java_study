@@ -61,7 +61,33 @@ Math 클래스
 int i = (int)(Math.random()*41)+5;  5~45사이의 난수를 리턴 / (45-5+1)+5
 
 
+▶java.util 패키지
+Stringtokenizer
 
+Calendar
+Calendar cal = Calendar.getInstance();  //static getInstance()를 통해 객체 생성 
+
+cal.get(Calendar.YEAR)  // get()를 통해 호출할때 사용한 매개값은 모두 Calendar 클래스에 선언되어있는 상수
+cal.get(Calendar.MONTH) //0=1월
+cal.get(Calendar.DATE)
+int hour = cal.get(Calendar.HOUR)
+int min = cal.get(Calendar.MINUTE)
+int sec = cal.get(Calendar.SECOND)
+
+String[] week = {"","일","월","화","수","목","금","토","일"};
+System.out.println(week[cal.get(Calendar.DAY_OF_WEEK)]+"요일");  //일요일이 1
+
+
+▶java.text 패키지
+Date 패키지와 SimpleDateFormat 패키지
+Date now = new Date();
+System.out.println(now); //오버라이딩된 toString() 현재 날짜와 시간 정보 리턴
+
+SimpleDateFormat sdf1 = new SimpleDateFormat("YY-MM-d");
+System.out.println(sdf1.format(now));
+		
+SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss a"); //"yyyy년MM월dd일 E요일 hh:mm:ss"
+System.out.println(sdf2.format(now));
 
 
 
