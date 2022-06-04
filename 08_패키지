@@ -1,1 +1,25 @@
+▶java.lang 패키지  *임포트 필요없음
 
+Object 클래스: 모든 클래스를 상속함
+toString(): 참조변수의 객체 번지 리턴/ 클래스에 자주쓰는 문자열 오버라이딩 해놓아서 편하게 String타입 리턴 가능
+equals(String anotherString): 문자열이 서로 같은지 boolean타입 리턴
+
+
+String 클래스
+String str1 = new String("Nice day"); //100번지
+String str2 = new String("Nice day"); //200번지
+System.out.println(str1==str2); //주소비교 => false
+
+toString()  Object 클래스 메서드에 오버라이딩되어 문자열 리턴
+length()
+equalsIgnoreCase(String anotherString)  대소문자 구분없이 비교
+
+indexOf(String str)  찾는 문자 index번호로 알려줌 / 없으면 -1 리턴
+contains(String st)  찾는 문자 존재하는지 boolean
+
+subString(int beginIndex, int endIndex)  beginIndex부터 endIndex전까지 문자열 리턴 beginIndex<= s <endIndex
+subString(int beginIndex)  beginIndex부터 문자열 리턴
+
+toUpperCase() 대문자로 바꿔줌
+toLowerCase() 소문자로 바꿔줌
+replace(CharSequence target, CharSequence replacement)  target을 replacement로 전부 바꿔줌
