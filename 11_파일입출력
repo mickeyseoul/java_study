@@ -2,16 +2,34 @@
 자료의 입출력을 도와주는 연결다리
 단방향 (읽기와 쓰기가 동시에 진행되지 않음)
 
- 바이트 스트림
- InputStream
- OutputStream
- 한글처리 잘 안됨
+바이트 스트림
+InputStream
+OutputStream
+한글처리 잘 안됨
   
- 문자스트림
- Reader
- Writer
- 한글처리 잘 됨
+문자스트림
+Reader
+Writer
+한글처리 잘 됨
 
- IOException
- read() write() close()
- 
+IOException
+read() write() close()
+
+
+FileInputStream
+FileOutputStream
+
+
+FileWriter
+FileReader
+
+
+▶보조스트림
+문자 변환 보조 스트림
+InputStreamReader: InputStream(바이트)로 읽어들여 Reader(문자)로 내보냄
+OutputStreamWriter
+
+
+성능향상 보조 스트림: Buffer
+프로그램이 입출력 소스와 직접 작업하지 않고 중간에 메모리 버퍼와 작업함으로써 실행 성능을 향상시킴 => 출력횟수를 줄여준다
+br.readLine() 사용가능
