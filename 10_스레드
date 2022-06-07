@@ -1,0 +1,41 @@
+▶스레드: 한 가지 작업을 실행하기 위해 순차적으로 실행할 코드를 실처럼 이어 놓은 것
+멀티스레드 : 하나의 어플리케이션 프로세스 내에 스레드(코드의 실행 흐름)가 동시적으로 실행
+
+모든 자바 애플리케이션은 항상 메인 스레드가 main() 메소드를 실행하면서 시작
+
+
+▶멀티스레드 방법
+
+멀티 스레드 할 클래스에 Runnable 인터페이스 구현받음 -> 메인에 Thread 객체 생성 -> 인자값에 구현클래스 참조변수 입력
+Thread객체참조변수.start();
+Thread객체참조변수.run();
+
+
+멀티 스레드 할 클래스에 Thread 클래스 상속받음
+상속받은클래스참조변수.start();
+
+
+try {
+	Thread.sleep(1000);  //1초동안 쉬고 //new InterruptedException 객체생성 //예외 뜰 가능성이 크기 때문에 예외처리 항상 해줘야 함
+} catch (InterruptedException e) {
+	e.printStackTrace();
+}
+InterruptedException은 RuntimeException의 상속을 받지 않는다
+ -> 프로그래밍에서 해결 할 수 있는 문제가 아님(나만 잘 하면 됨)
+ ->예외처리 필수
+      
+ 
+멀티스레드 실행시 우선순위
+상속받은클래스참조변수.getPriority(); =>기본값5 리턴
+상속받은클래스참조변수.setPriority(10); //1~10 10이 가장 큼
+
+
+데몬스레드
+상속받은클래스참조변수.setDaemon(true); //Thread클래스 setDaemon(): main()가 끝나면 동시에 끝남***
+상속받은클래스참조변수.start(); //setDaemon(true)후에 start()해야 함 아니면 예외뜸
+
+
+동기화 블록
+synchronized(공유자원) {
+	공유자원에 변화  //임계영역 단 하나의 스레드만 실행할 수 있는 코드 영역(공유자원이 사용되는 자리)
+}
