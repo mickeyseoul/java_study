@@ -1,0 +1,17 @@
+스트림 Stream:
+자료의 입출력을 도와주는 연결다리
+단방향 (읽기와 쓰기가 동시에 진행되지 않음)
+
+ 바이트 스트림
+ InputStream
+ OutputStream
+ 한글처리 잘 안됨
+  
+ 문자스트림
+ Reader
+ Writer
+ 한글처리 잘 됨
+
+ IOException
+ read() write() close()
+ 
