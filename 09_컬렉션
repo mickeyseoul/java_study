@@ -1,0 +1,96 @@
+▶자바 컬렉션 프레임 웍 //<>안에 객체타입만 가능
+
+배열
+같은 타입의 데이터를 하나로 묶어서 관리
+고정된 크기
+위치번호가 0번부터 시작
+기본타입 데이터/객체 둘다 저장 가능
+로또번호
+
+컬렉션==저장공간
+여러 데이터를 하나로 묶어서 관리
+동적으로 메모리를 확장/축소
+위치번호 있는것 없는것 있음
+객체만 저장할 수 있음
+회원번호
+
+
+인터페이스 - 자식 클래스
+
+List:
+-ArrayList 순서O / 중복O
+Vector 순서O / 중복O
+
+Set:
+-HashSet 순서X / 중복X ->get(인덱스), for문 못씀
+
+Map: key/value의 pair쌍으로 이루어진 데이터값. key 중복X Value 중복O
+-HashMap 순서X / 중복
+
+
+▶ArrayList   for문 / XEnumeration / OIterator
+ArrayList<> list = new ArrayList<>();
+list.add(데이터);
+list.size();
+
+list.get(인덱스);
+System.out.println(list); => list 컬렉션에 존재하는 모든 요소 리턴 /list.toString() 생략형 /객체요소일 경우 각각의 번지 리턴 -> 직접 오버라이딩하여 변수출력으로 변경 가능 
+list.contains(데이터); =>boolean 리턴
+list.indexOf(데이터); =>(데이터 위치한 인덱스 리턴)데이터 없으면 -1 리턴
+
+list.add(인덱스,데이터); =>인덱스에 끼워넣기 나머지는 뒤로 밀림
+list.set(인덱스,데이터); =>인덱스에 데이터 바꿈
+
+list.remove(데이터); =>사라지고 전체적으로 앞으로 밀림
+
+
+▶Vector   Ofor문 / OEnumeration / OIterator
+Vector<> v = new Vector<>();
+v.add(데이터);
+v.size();
+
+v.get(인덱스);
+System.out.println(v);
+
+v.contains(데이터);
+
+Enumeration<String> en = v.elements();
+for(en.hasMoreElements()){
+ System.out.println(en.nextElement());
+ }
+ 
+ Iterator<String> it = v.iterator();
+ for(v.hasNext()){
+  System.out.println(v.next());
+
+
+▶HashSet   Xfor문 / XEnumeration / OIterator
+HashSet<> hs = new HashSet<>();
+hs.add(데이터);
+hs.size(); =>중복시 마지막이 살아남음
+
+System.out.println(hs);
+
+hs.contains(데이터);
+
+hs.remove(데이터);
+
+
+▶HashMap    Xfor문 //검색기능
+HashMap<K,V> hm = new HashMap<K,V>();
+hm.put(K데이터,v데이터);
+hm.size();
+System.out.println(hm); //{K=V, K=V}
+
+hm.get(K데이터); =>v데이터 리턴 //반대로 불가능=>null //없는 Key입력=>null
+
+hm.containsKey(K데이터); =>boolean 리턴
+hm.containsValue(v데이터); =>boolean 리턴
+
+hm.remove(K데이터); =>Value도 쌍으로 사라짐
+
+Set<String> s = hm.keySet(); =>모든 K데이터
+for(String x : s){
+ System.out.println(hm.get(x)); =>모든 V데이터 리턴
+}
+
