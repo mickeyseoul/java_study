@@ -4,9 +4,9 @@ Event Listener: 이벤트 소스에서 이벤트가 발생하는지를 검사하
 이벤트가 발생이 되면 실제적으로 처리할 수 있도록 만든 인터페이스 =>미완성메서드 완성해 줘야함 
 
 ▶Event Listener 인터페이스
-ActionListener: Button 만들면 -> 버튼마다 addActionListener 달아주기 / 버튼을 누르면 ActionEvent가 생성되고, 인터페이스의 추상메서드 자동 호출 됨(그래서 Listener 달아줘야 )
-ItemListener: Choice 만들면 -> 초이스에 addItemListener 달아주기 / 초이스를 누르면 ItemEvent가 생성되고, 인터페이스의 추상메서드 자동 호출 됨
-WindowListener: addWindowListener 달아주기
+ActionListener: Button 만들면 -> 버튼마다 addActionListener(this) 달아주기 / 버튼을 누르면 ActionEvent가 생성되고, 인터페이스의 추상메서드 자동 호출 됨(그래서 Listener 달아줘야 )
+ItemListener: Choice 만들면 -> 초이스에 addItemListener(this) 달아주기 / 초이스를 누르면 ItemEvent가 생성되고, 인터페이스의 추상메서드 자동 호출 됨
+WindowListener: addWindowListener(this) 달아주기
 
 
 버튼을 만들면 new ActionEvent()가 생성되고(Listener를 달아줘야 그 소리를 캐치할 수 있음), 인터페이스의 추상메서드 자동 호출 됨
