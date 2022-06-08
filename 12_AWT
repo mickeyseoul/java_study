@@ -1,0 +1,11 @@
+▶AWT Abstract Window Tool
+Event Source: 이벤트가 발생되는 컴포넌트를 말함
+Event Listener: 이벤트 소스에서 이벤트가 발생하는지를 검사하고 있다가
+이벤트가 발생이 되면 실제적으로 처리할 수 있도록 만든 인터페이스 =>미완성메서드 완성해 줘야함 
+
+▶Event Listener 인터페이스
+ActionListener: Button 만들면 -> 버튼마다 addActionListener 달아주기 ->
+ItemListener: Choice 만들면 -> 초이스에 addItemListener 달아주기 ->
+Button은 ActionEvent가 발생하면 new ActionEvent()객체가 생성됨
+Choice ItemEvent가 발생하면 new ItemEvent()
+Frame WindowEvent가 발생하면 new WindowEvent()
