@@ -1,9 +1,10 @@
-▶AWT Abstract Window Tool
+▶AWT패키지 Abstract Window Tool: 윈도우에서만
+extends Frame
 Event Source: 이벤트가 발생되는 컴포넌트를 말함
 Event Listener: 이벤트 소스에서 이벤트가 발생하는지를 검사하고 있다가
 이벤트가 발생이 되면 실제적으로 처리할 수 있도록 만든 인터페이스 =>미완성메서드 완성해 줘야함 
 
-▶Event Listener 인터페이스
+▷Event Listener 인터페이스
 ActionListener: Button 만들면 -> 버튼마다 addActionListener(this) 달아주기 
 / 버튼을 누르면 new ActionEvent()가 생성되고, 인터페이스의 추상메서드 자동 호출 됨(그래서 Listener 달아줘야 )
 ItemListener: Choice 만들면 -> 초이스에 addItemListener(this) 달아주기 
@@ -11,5 +12,8 @@ ItemListener: Choice 만들면 -> 초이스에 addItemListener(this) 달아주�
 WindowListener: addWindowListener(this) 달아주기
 
 
+▶Swing 패키지: 어느 운영체제든 똑같이 출력됨
+extends JFrame
+Container contentPane = getContentPane(); //JFrame에서는 해줘야 컨테이너 중 작업영역 사용 가능
 
-
+▷
