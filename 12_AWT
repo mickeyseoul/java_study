@@ -28,6 +28,8 @@ Event Listener: 이벤트 소스에서 이벤트가 발생하는지를 검사하
 ▷Event Listener 통해서
   Button을 누르면 new ActionEvent()가 생성되고, 인터페이스의 추상메서드 자동 호출 됨
   Choice를 누르면 new ItemEvent()가 생성되고, 인터페이스의 추상메서드 자동 호출 됨
+  
+  Choice obj = (Choice)e.getSource(); //몇개의 Choice 중에 이벤트 소스가 무엇이었나???
 
 
 ▶Swing 패키지: 어느 운영체제든 똑같이 출력됨
