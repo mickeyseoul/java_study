@@ -20,14 +20,14 @@ for(i=1;i<score.length;i++) {
 
 ▷정렬 오름차순
 int temp;
-for(i=0;i<scores.length-1;i++) {      //0번부터 scores.length-1까지
-		for(j=i+1;j<scores.length;j++) {  //1번부터 scores.length까지
-				if(scores[i]>scores[j]) {     //앞이 뒤보다 크면 바꿔라
-						temp = scores[j];
-						scores[j]=scores[i];
-						scores[i]=temp;
-				}
+for(i=0;i<scores.length-1;i++) {     		 //0번부터 scores.length-1까지
+	for(j=i+1;j<scores.length;j++) { 	 //1번부터 scores.length까지
+		if(scores[i]>scores[j]) {    	 //앞이 뒤보다 크면 바꿔라
+			temp = scores[j];
+			scores[j]=scores[i];
+			scores[i]=temp;
 		}
+	}
 }
 
 ▷확장 for문
@@ -56,7 +56,9 @@ for(i=0;i<arr.length;i++) {       //행의 길이***
 
 ▷확장포문
 for(int[] t : arr) {
-		for(int x : t) {
-				System.out.print(x+" ");
-		}
-		System.out.println();  
+	for(int x : t) {
+		System.out.print(x+" ");
+	}
+	System.out.println();  
+}
+
