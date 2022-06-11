@@ -1,1 +1,62 @@
+▶배열
+같은 타입의 데이터를 한 묶음으로 묶어서 관리하는 것
 
+
+▶1차원 배열
+참조변수       배열번지 리턴
+참조변수[i]    i번지의 데이터 리턴
+
+▷max/min
+int[] score = {79,88,91,33,100,55,95};
+System.out.println(score.length);
+max = score[0];
+min = score[0];
+for(i=1;i<score.length;i++) {
+	  if(max<score[i])
+		  max = score[i];
+  	if(min > score[i])
+      min = score[i]; 
+}
+
+▷정렬 오름차순
+int temp;
+for(i=0;i<scores.length-1;i++) {      //0번부터 scores.length-1까지
+		for(j=i+1;j<scores.length;j++) {  //1번부터 scores.length까지
+				if(scores[i]>scores[j]) {     //앞이 뒤보다 크면 바꿔라
+						temp = scores[j];
+						scores[j]=scores[i];
+						scores[i]=temp;
+				}
+		}
+}
+
+▷확장 for문
+for(int x : arr) {         //for(하나만 담을 수 있는 변수 : 반복대상)
+	System.out.println(x);
+}
+
+
+▶2차원 배열
+참조변수        :배열번지들의 배열번지 리턴
+참조변수[i]     :i행의 배열번지 리턴
+참조변수[i][j]  :i행의 j열 번지의 데이터 리턴
+
+int[][] arr = new int[3][]; //행3줄 열은 정해놓지않음
+arr[0]=new int[4]; // 0행 열4개 0000
+arr[1]=new int[3]; // 1행 열3개 000
+arr[2]=new int[2]; // 2행 열2개 00
+
+int i,j;
+for(i=0;i<arr.length;i++) {       //행의 길이***
+  for(j=0;j<arr[i].length;j++){   //i행 열의 길이
+    System.out.print(arr[i][j]);  //i행 j열 01 02 03 04
+	}
+	System.out.println();
+}
+
+▷확장포문
+for(int[] t : arr) {
+		for(int x : t) {
+				System.out.print(x+" ");
+		}
+		System.out.println();  
