@@ -1,0 +1,20 @@
+▶실행방법
+ 1. 이클립스 : 소스코드(.java) Run누르면 JDK로 자동 컴파일 됨 -> 바이트코드(.class)
+ 2. cmd 창에서 :
+ C:\Users\admin>cd C:\Java_pyr\01_자료형과 기본입출력\src		   //cd(change directory) 탐색기에서 가져오기
+ C:\Java_pyr\01_자료형과 기본입출력\src>javac Ex01_출력문.java		//컴파일 진행
+ C:\Java_pyr\01_자료형과 기본입출력\src>java Ex01_출력문			//실행됨
+
+▶
+화일명 변경하는 법 :
+1. 화일이름 우클릭-Refactor-Rename에서 이름 변경
+2. 화일이름 클릭-F2키-이름 변경
+
+▶
+복사 : ctrl + c
+붙여넣기 : ctrl +v
+복붙 동시에 : ctrl + alt + 방향키
+한줄 삭제 ctrl + d
+실행 : ctrl + F11
+
+ctrl+a+i 줄맞춤
