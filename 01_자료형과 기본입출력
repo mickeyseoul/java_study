@@ -32,15 +32,15 @@ boolean	2바이트
 실수 : %f
 문자 : %c
 문자열 : %s
-		*
-		double c=98.765;
-		String d="아이유";
+	*
+	double c=98.765;
+	String d="아이유";
 		
-		System.out.printf("c:%.1f\n" , c); //소수점 1의 자리까지
-		System.out.printf("c:%7.1f\n" , c); //전체자리.소수아래자리
+	System.out.printf("c:%.1f\n" , c); //소수점 1의 자리까지
+	System.out.printf("c:%7.1f\n" , c); //전체자리.소수아래자리
 		
-		System.out.println("d:" + d);
-		System.out.printf("d:%5s\n" , d); //공백5개
+	System.out.println("d:" + d);
+	System.out.printf("d:%5s\n" , d); //공백5개
 
 
 
