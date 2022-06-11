@@ -1,18 +1,3 @@
-▶
-; 세미콜론
-: 콜론
-\t : tab
-\n : 엔터
-"" : 문자열
-'' : 문자, 문자상수
-
-▶실행방법
- 1. 이클립스 : 소스코드(.java) Run누르면 JDK로 자동 컴파일 됨 -> 바이트코드(.class)
- 2. cmd 창에서 :
- C:\Users\admin>cd C:\Java_pyr\01_자료형과 기본입출력\src		   //cd(change directory) 탐색기에서 가져오기
- C:\Java_pyr\01_자료형과 기본입출력\src>javac Ex01_출력문.java		//컴파일 진행
- C:\Java_pyr\01_자료형과 기본입출력\src>java Ex01_출력문			//실행됨
-
 ▶자료형
 정수형
  byte	1바이트 -128~127
@@ -22,8 +7,9 @@
 실수형
  float	4바이트
  double	8바이트 -1.7E308 ~ +1.7E308 //E308 10^308 10의308승
-그 외
-char	1바이트
+문자형
+char	1바이트 //작은따옴표로 한글자만 가능 //String: 큰따옴표만 가능
+논리형
 boolean	2바이트
 
 ▶서식문자
@@ -40,6 +26,27 @@ boolean	2바이트
 		
 	System.out.println("d:" + d);
 	System.out.printf("d:%5s\n" , d); //공백5개
+	
+▶
+; 세미콜론
+: 콜론
+\t : tab
+\n : 엔터
+"" : 문자열
+'' : 문자, 문자상수
 
+▶아스키코드값
+A : 65
+B : 66
+C : 67
 
+a : 97
+b : 98
+
+▶실행방법
+ 1. 이클립스 : 소스코드(.java) Run누르면 JDK로 자동 컴파일 됨 -> 바이트코드(.class)
+ 2. cmd 창에서 :
+ C:\Users\admin>cd C:\Java_pyr\01_자료형과 기본입출력\src		   //cd(change directory) 탐색기에서 가져오기
+ C:\Java_pyr\01_자료형과 기본입출력\src>javac Ex01_출력문.java		//컴파일 진행
+ C:\Java_pyr\01_자료형과 기본입출력\src>java Ex01_출력문			//실행됨
 
