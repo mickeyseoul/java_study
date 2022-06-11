@@ -1,21 +1,46 @@
-public class EX06_01_상속 {
+▶
+; 세미콜론
+: 콜론
+\t : tab
+\n : 엔터
+"" : 문자열
+'' : 문자, 문자상수
 
-	public static void main(String[] args) {
-		Sports s1 = new Sports(); //야구, 9
-		Sports s2 = new Sports("축구",11);
-		
-		s1.display();
-		System.out.println();
-		s2.display();
-		System.out.println();
-		
-		Baseball bb = new Baseball("야구",5,0.345);
-		bb.display(); // 자식과 부모의 메서드가 완전히 일치 할 경우 오버라이딩(overriding) -> 자식 클래스 매서드 출력
-		System.out.println();
-		
-		Football fb = new Football("축구",7,3);
-		fb.display();
+▶실행방법
+ 1. 이클립스 : 소스코드(.java) Run누르면 JDK로 자동 컴파일 됨 -> 바이트코드(.class)
+ 2. cmd 창에서 :
+ C:\Users\admin>cd C:\Java_pyr\01_자료형과 기본입출력\src		   //cd(change directory) 탐색기에서 가져오기
+ C:\Java_pyr\01_자료형과 기본입출력\src>javac Ex01_출력문.java		//컴파일 진행
+ C:\Java_pyr\01_자료형과 기본입출력\src>java Ex01_출력문			//실행됨
 
-	}
+▶자료형
+정수형
+ byte	1바이트 -128~127
+ short	2바이트 -32,000~32,000
+ int	4바이트 -21억~21억
+ long	8바이트 -9백경~9백경
+실수형
+ float	4바이트
+ double	8바이트 -1.7E308 ~ +1.7E308 //E308 10^308 10의308승
+그 외
+char	1바이트
+boolean	2바이트
 
-}
+
+▶서식문자
+정수 : %d
+실수 : %f
+문자 : %c
+문자열 : %s
+		*
+		double c=98.765;
+		String d="아이유";
+		
+		System.out.printf("c:%.1f\n" , c); //소수점 1의 자리까지
+		System.out.printf("c:%7.1f\n" , c); //전체자리.소수아래자리
+		
+		System.out.println("d:" + d);
+		System.out.printf("d:%5s\n" , d); //공백5개
+
+
+
