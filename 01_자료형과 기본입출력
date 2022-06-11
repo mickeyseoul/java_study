@@ -1,4 +1,4 @@
-▶자료형
+▶자료형(데이터타입)
 정수형
  byte	1바이트 -128~127
  short	2바이트 -32,000~32,000
@@ -11,6 +11,13 @@
 char	1바이트 //작은따옴표로 한글자만 가능 //String: 큰따옴표만 가능
 논리형
 boolean	2바이트
+
+▶형변환 convertion
+byte < short < int < long*** < float < double
+정수형long보다 실수형float이 더 작더라도 암시적 형변환 불가능***  //long i = (long)1.1f; => i = 1
+
+암시적 형변환: 큰자료형 <- 작은자료형
+명시적 형변환: 작은자료형 <- (작은자료형)큰자료형
 
 ▶서식문자
 정수 : %d
@@ -42,11 +49,4 @@ C : 67
 
 a : 97
 b : 98
-
-▶실행방법
- 1. 이클립스 : 소스코드(.java) Run누르면 JDK로 자동 컴파일 됨 -> 바이트코드(.class)
- 2. cmd 창에서 :
- C:\Users\admin>cd C:\Java_pyr\01_자료형과 기본입출력\src		   //cd(change directory) 탐색기에서 가져오기
- C:\Java_pyr\01_자료형과 기본입출력\src>javac Ex01_출력문.java		//컴파일 진행
- C:\Java_pyr\01_자료형과 기본입출력\src>java Ex01_출력문			//실행됨
 
