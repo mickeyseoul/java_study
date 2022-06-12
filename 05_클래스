@@ -2,7 +2,7 @@
 클래스: 사용자 정의 자료형
 class Person{ 
   static String nation; //static 멤버변수(클래스변수)  :여러객체가 공유해서 쓰고싶을 때 사용 //객체생성없이 사용 가능
-	String name;          //instance 멤버변수           :객체마다의 고유 데이터
+	String name;          //instance 멤버변수     :객체마다의 고유 데이터
 	int age;
 	double height;
 }
@@ -39,7 +39,17 @@ public class Ex05_01_클래스 {
 메서드 호출(i,s);			(전달)인자 or argument
 메서드 정의(int i, String s){}	매개변수 or parameter
 
+▷메인메서드
+public class Ex05_04_메서드 {
+	public static void main(String[] args) { //정의
+	}
+}
+//Ex05_04_메서드 ab = new Ex05_04_메서드(); 메인메서드의 클래스 객체 자동으로 만들어짐
+//메인메서드는 ab.main() 자바가상머신의 의해 자동 호출; 호출요x
 
-▷메인메서드에서 
 메인클래스 내 메서드 사용시: static메서드 - 바로 메서드만 호출 / 일반메서드 - 객체 생생 후 메서드 호출
 다른클래스 메서드 사용시: static메서드 - 클래스.메서드 호출 / 일반메서드 - 객체 생생 후 메서드 호출
+
+static 메서드에서는 static 메서드만 호출 할 수 있다.
+static 메서드가 포함된 클래스의 객체를 만들어 메서드에 접근하면
+static 붙지 않은 메서드도 호출할 수 있다.
