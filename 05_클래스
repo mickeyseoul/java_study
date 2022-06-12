@@ -55,15 +55,15 @@ static 메서드에서는 static 메서드만 호출 할 수 있다.
 static 메서드가 포함된 클래스의 객체를 만들어 메서드에 접근하면
 static 붙지 않은 메서드도 호출할 수 있다.
 
-▶변수
+▶객체의 변수 !=메인클래스의 변수***
 class Var{
 	static int a;		//static 멤버 변수 //자동으로 0으로 초기화 됨
 	int b; 			//instance 멤버 변수 //자동으로 0으로 초기화 됨 //객체를 만들 때 마다 생김
 	
 	void increment() {
 		int c=0;	//지역변수 //자동으로 초기화x
-		a++;
-		b++	
+		a++;	객체내계속쌓임	
+		b++	객체내계속쌓임	
 		c++;
 		System.out.println("a:"+a);
 		System.out.println("b:"+b);
