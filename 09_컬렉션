@@ -63,6 +63,7 @@ for(it.hasNext()){
   System.out.println(it.next());
 }
 
+
 ▶HashSet   Xfor문 / XEnumeration / OIterator
 HashSet<> hs = new HashSet<>();
 hs.add(데이터);
