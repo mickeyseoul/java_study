@@ -21,10 +21,10 @@ ArrayList 순서O / 중복O
 Vector 순서O / 중복O
 
 Set:
-HashSet 순서X / 중복X ->get(인덱스), for문 못씀
+HashSet 순서X /중복X                          //Xfor문 Xget(인덱스)
 
-Map: key/value의 pair쌍으로 이루어진 데이터값. 
-HashMap 순서X / key 중복X Value 중복O
+Map: key/value의 pair쌍으로 이루어진 데이터값
+HashMap 순서X / key 중복X Value 중복O         //Xfor문 *확장for문 가능
 
 
 ▶ArrayList   for문 / XEnumeration / OIterator
@@ -76,7 +76,7 @@ hs.contains(데이터);
 hs.remove(데이터);
 
 
-▶HashMap    Xfor문 //검색기능  //확장for문 가능***
+▶HashMap    //검색기능  //확장for문 가능***
 HashMap<K,V> hm = new HashMap<K,V>();
 hm.put(K데이터,v데이터);
 hm.size();
