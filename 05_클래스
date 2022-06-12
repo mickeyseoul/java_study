@@ -73,3 +73,29 @@ class Var{
 		System.out.println("c:"+c);
 	}
 }
+
+
+▶오버로딩
+하나의 클래스 안에 메서드 이름이 같지만
+매개변수의 개수와 자료형(타입)이 다름
+(리턴타입은 오버로딩의 조건에 포함 되지 않음 오직 매개변수로만 구별)
+
+▶setter/getter
+
+▶생성자 Constructor
+클래스와 이름이 똑같은(대소문자도 똑같은) 메서드
+따로 정의하지 않아도 객체 생성시 자동으로 기본생성자(default 생성자) 생성됨
+리턴타입 없음(void 안씀 쓰면 에러)
+매개변수가 있는 생성자가 만들어지면 디폴트 생성자 자동으로 안만들어짐
+
+▶객체배열
+Book[] arr = new Book[3]; //아직 객체 안만듬. ()가 나와야 함. 주소 담길 방(참조변수) 3개 만듬
+arr[0] = new Book();
+arr[1] = new Book("HTML","아이유",3000);
+arr[2] = new Book("DB",5000);
+
+int i;
+for(i=0;i<arr.length;i++) {
+	arr[i].show();
+	System.out.println();
+}
