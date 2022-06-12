@@ -3,7 +3,7 @@
  2. cmd 창에서 :
  C:\Users\admin>cd C:\Java_pyr\01_자료형과 기본입출력\src		   //cd(change directory) 탐색기에서 가져오기
  C:\Java_pyr\01_자료형과 기본입출력\src>javac Ex01_출력문.java		//컴파일 진행
- C:\Java_pyr\01_자료형과 기본입출력\src>java Ex01_출력문			//실행됨
+ C:\Java_pyr\01_자료형과 기본입출력\src>java Ex01_출력문			//실행됨 //.class 지우고***
 
 ▶
 화일명 변경하는 법 :
