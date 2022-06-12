@@ -48,6 +48,14 @@ for(i=0;i<arr.length;i++) {
 for문을 사용해 '한번에' 뽑아낼 수 있음 print()!
 
 
+▶import
+▷접근제어자 
+public: 같은 패키지- sub(자식) 클래스 O/ 일반 클래스O //다른 패기지 - sub 클래스 O/ 일반 클래스 O
+protected: 같은 패키지- sub 클래스 O/ 일반 클래스O //다른 패기지- sub 클래스 O/ 일반 클래스 X
+(default): 같은 패키지- sub 클래스 O/ 일반 클래스O //다른 패기지 - sub 클래스 X/ 일반 클래스 X
+private: 같은 패키지- sub 클래스 X/ 일반 클래스 X//다른 패기지 - sub 클래스 X/ 일반 클래스 X
+
+
 ▶추상클래스
 extends 추상클래스
 반드시 넣어야하는 핵심기능을 빠뜨리지 않도록 하게 할 목적으로 
