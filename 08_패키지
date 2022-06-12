@@ -1,25 +1,25 @@
 ▶자바 API Application Programming Interface:
-프로그램 개발에 자주 사용되는 클래스 및 인터페이스 모음 / 라이브러리
+프로그램 개발에 자주 사용되는 클래스 및 인터페이스 모음 // 라이브러리
 
 
 ▶java.lang 패키지: 가장 기본적인   *임포트 필요없음
 
-Object 클래스: 모든 클래스를 상속함
-toString(): 참조변수의 객체 번지 리턴/ 클래스에 자주쓰는 문자열 오버라이딩 해놓아서 편하게 String타입 리턴 가능
-equals(String anotherString): 문자열이 서로 같은지 boolean타입 리턴
+▷Object 클래스: 모든 클래스를 상속함
+.toString(): 참조변수의 객체 번지 리턴/ 클래스에 자주쓰는 문자열 오버라이딩 해놓아서 편하게 String타입 리턴 가능
+.equals(String anotherString): 문자열이 서로 같은지 boolean타입 리턴
 
 
-String 클래스
+▷String 클래스
 String str1 = new String("Nice day"); //100번지
 String str2 = new String("Nice day"); //200번지
 System.out.println(str1==str2); //주소비교 => false
 
-toString()  Object 클래스 메서드에 오버라이딩되어 문자열 리턴
-length()
-equalsIgnoreCase(String anotherString)  대소문자 구분없이 비교
+.toString()  Object 클래스 메서드에 오버라이딩되어 문자열 리턴
+.length()
+.equalsIgnoreCase(String anotherString)  대소문자 구분없이 비교
 
-contains(String st)  찾는 문자 존재하는지 boolean 리턴
-indexOf(String str)  찾는 문자 index번호로 알려줌 / 없으면 -1 리턴
+.contains(String st)  찾는 문자 존재하는지 boolean 리턴
+.indexOf(String str)  찾는 문자 index번호로 알려줌 // 없으면 -1 리턴
 
 		ex)
 		String fullName = "Hello.java";
@@ -32,19 +32,16 @@ indexOf(String str)  찾는 문자 index번호로 알려줌 / 없으면 -1 리�
 		
 		System.out.println("fileName:"+fileName);
 		System.out.println("ext:"+ext);
-		
-		String id = "kim";
-		String pw = "1234";
 
-subString(int beginIndex, int endIndex)  beginIndex부터 endIndex전까지 문자열 리턴 beginIndex<= s <endIndex
-subString(int beginIndex)  beginIndex부터 문자열 리턴
+.subString(int beginIndex, int endIndex)  beginIndex부터 endIndex전까지 문자열 리턴 beginIndex<= s <endIndex
+.subString(int beginIndex)  beginIndex부터 문자열 리턴
 
-toUpperCase() 대문자로 바꿔줌
-toLowerCase() 소문자로 바꿔줌
-replace(CharSequence target, CharSequence replacement)  target을 replacement로 전부 바꿔줌
+.toUpperCase() 대문자로 바꿔줌
+.toLowerCase() 소문자로 바꿔줌
+.replace(CharSequence target, CharSequence replacement)  target을 replacement로 전부 바꿔줌
 
 
-Wrapper 클래스: 기본데이터 타입을 객체로 만들어야 하는 경우에 사용
+▷Wrapper 클래스: 기본데이터 타입을 객체로 만들어야 하는 경우에 사용
 Byte
 Short
 Integer
@@ -61,16 +58,16 @@ int i = Integer.parseInt("10");  문자열을 정수로 리턴
 Integer it = Integer.valueOf("10");
 
 
-Math 클래스
+▷Math 클래스
 int i = (int)(Math.random()*41)+5;  5~45사이의 난수를 리턴 / (45-5+1)+5
 
 
 ▶java.util 패키지: 조미료 역할
 
-Stringtokenizer  구분자
+▷Stringtokenizer  구분자
 
 
-Calendar
+▷Calendar
 Calendar cal = Calendar.getInstance();  //static getInstance()를 통해 객체 생성 
 
 cal.get(Calendar.YEAR)  // get()를 통해 호출할때 사용한 매개값은 모두 Calendar 클래스에 선언되어있는 상수
