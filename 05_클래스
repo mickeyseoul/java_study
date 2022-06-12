@@ -1,5 +1,29 @@
-▶ 메인클래스와 클래스의 차이
+▶
+클래스: 사용자 정의 자료형
+class Person{ 
+  static String nation; //static 멤버변수(클래스변수)  :여러객체가 공유해서 쓰고싶을 때 사용 //객체생성없이 사용 가능
+	String name;          //instance 멤버변수           :객체마다의 고유 데이터
+	int age;
+	double height;
+}
 
+public class Ex05_01_클래스 {
+
+	public static void main(String[] args) {
+    
+    Person.nation = "korea";
+    
+    //Person p1; //까지는 공간 안 만들어 짐
+    //Person p1 = null; //참조변수 생김
+    Person p1 = new Person(); //객체생성 //new Person()까지 해줘야 공간이 생김
+    
+    p1.name = "우기";
+    
+  }
+
+}
+
+▶ 메인클래스와 클래스의 차이
 메인클래스: 
 변수 초기화 반드시 필요
 
