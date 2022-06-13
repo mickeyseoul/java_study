@@ -32,4 +32,4 @@ OutputStreamWriter
 
 성능향상 보조 스트림: Buffer
 프로그램이 입출력 소스와 직접 작업하지 않고 중간에 메모리 버퍼와 작업함으로써 실행 성능을 향상시킴 => 출력횟수를 줄여준다
-br.readLine() 사용가능
+br.readLine() BufferedReader에서만 사용가능***
