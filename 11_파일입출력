@@ -9,6 +9,7 @@ OutputStream
   
 문자스트림
 Reader
+  read() 문자 한개씩 아스키코드 값으로 들어감 //EOF(End Of File) = -1
 Writer
 한글처리 잘 됨
 
