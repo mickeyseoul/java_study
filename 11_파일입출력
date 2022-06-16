@@ -26,6 +26,7 @@ FileNotFoundException
 
 IOException
   read() write(String str) close()
+  readLine()
   FileWriter
 
 
@@ -35,20 +36,31 @@ InputStreamReader: InputStream(바이트)로 읽어들여 Reader(문자)로 가�
 OutputStreamWriter
 
 InputStream is = System.in;
-InputStreamReader isr = new InputStreamReader(); //InputStream 입력받는 것은 System.in //System.in은 InputStream의 한 종류
+InputStreamReader isr = new InputStreamReader(); //InputStream 입력받는 것은 System.in //System.in은 InputStream의 한 종류 <-------------
 BufferedReader br = new BufferedReader();	 //InpuStream을 읽겠다
 
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 
-▷성능향상 보조 스트림: Buffer
+▷성능향상 보조 스트림: Buffer //따로 예외처리 없음
 프로그램이 입출력 소스와 직접 작업하지 않고 중간에 메모리 버퍼와 작업함으로써 실행 성능을 향상시킴 => 출력횟수를 줄여준다
 br.readLine() 한줄씩 읽는 것 BufferedReader에서만 사용가능**
 flush() 사용후
 close()
 
-BufferedInputStream bis //따로 예외처리 없음
+BufferedInputStream
+	FileInputStream fis = new FileInputStream("to.txt"); //1차 스트림: 파일과 직접연결
+	BufferedInputStream bis  = new BufferedInputStream(fis,5); //2차 스트림: 버퍼와 연결 // 기본크기:8kbyte
+	=>BufferedInputStream bis = new BuffereInputStream(new FileInputStream("to.txt"),5);
 BufferedOuputStream bos
+
+BufferedReader
+	InputStream is = System.in;
+	InputStreamReader isr = new InputStreamReader(); //InputStream 입력받는 것은 System.in //System.in은 InputStream의 한 종류
+	BufferedReader br = new BufferedReader();	 //InpuStream을 읽겠다 <----------------------------------------------------------
+
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+BufferedWriter
 
 
 InputStreamReader ir = new InputStreamReader(new InputStream(System.in)); //1 InputStream로 읽어들인 것을 2 Reader로 읽어들임
