@@ -1,20 +1,29 @@
-스트림 Stream:
+▶스트림 Stream:
 자료의 입출력을 도와주는 연결다리
 단방향 (읽기와 쓰기가 동시에 진행되지 않음)
 
-바이트 스트림
-InputStream
-OutputStream
-한글처리 잘 안됨
-  
-문자스트림
+바이트 스트림: 한글처리 잘 안됨
+InputStream   :데이터를 읽어들이는 용도의 스트림 
+OutputStream  :데이터를 내보내는 용도의 스트림 
+
+FileInputStream fis = new FileInputStream("from.txt"); //먼저 파일 꼭 만들어 놔야 함 //읽어들일 해당 파일이 없을 때 FileNotFoundException
+FileOutputStream fos = new FileOutputStream("to.txt",false); //먼저 파일 생성 안해놓아도 저절로 생김 //해당 폴더(경로)가 없을 때 FileNotFoundException
+                                                            //안쓰면 ,false쓴 것과 같음 -> 파일이 이미 존재하면 싹 지우고 다시
+			                                                      //,true쓰면 이미 파일이 존재할때  계속 추가 됨
+
+
+문자스트림: 한글처리 잘 됨
 Reader
-  read() 문자 한개씩 아스키코드 값으로 들어감 //EOF(End Of File) = -1
 Writer
-한글처리 잘 됨
+
+
+▷예외
+FileNotFoundException
+  FileInputStream FileOutputStream FileReader
 
 IOException
-read() write() close()
+  read() write() close()
+  FileWriter
 
 
 FileInputStream
@@ -27,10 +36,22 @@ FileReader
 
 ▶보조스트림
 문자 변환 보조 스트림
-InputStreamReader: InputStream(바이트)로 읽어들여 Reader(문자)로 내보냄
+InputStreamReader: InputStream(바이트)로 읽어들여 Reader(문자)로 가져옴
 OutputStreamWriter
-
 
 성능향상 보조 스트림: Buffer
 프로그램이 입출력 소스와 직접 작업하지 않고 중간에 메모리 버퍼와 작업함으로써 실행 성능을 향상시킴 => 출력횟수를 줄여준다
-br.readLine() 한줄씩 읽는 것 BufferedReader에서만 사용가능***
+br.readLine() 한줄씩 읽는 것 BufferedReader에서만 사용가능**
+flush() 사용후
+close()
+
+BufferedInputStream bis //따로 예외처리 없음
+BufferedOuputStream bos
+
+
+InputStreamReader ir = new InputStreamReader(new InputStream(System.in)); //1 InputStream로 읽어들인 것을 2 Reader로 읽어들임
+
+
+
+
+
