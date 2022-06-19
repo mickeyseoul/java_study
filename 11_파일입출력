@@ -51,15 +51,15 @@ br.readLine() 한줄씩 읽는 것 //BufferedReader에서만 사용가능** X Bu
 flush() 사용후
 close()
 
-BufferedInputStream
-BufferedOuputStream
+BufferedInputStream bis //read()로 -1이 될때까지 한 줄씩 읽어들이기 때문에 flush() 필요 없음
+BufferedOuputStream bos //bos.flush()
 
 	FileInputStream fis = new FileInputStream("to.txt"); //1차 스트림: 파일과 직접연결
 	BufferedInputStream bis  = new BufferedInputStream(fis,5); //2차 스트림: 버퍼와 연결 // 기본크기:8kbyte
 	=>BufferedInputStream bis = new BuffereInputStream(new FileInputStream("to.txt"),5);
 
-BufferedReader
-BufferedWriter
+BufferedReader br //readLine()으로 null이 될때까지 한 줄씩 읽어들이기 때문에 flush() 필요 없음
+BufferedWriter bw //bw.flush()
 
 	InputStream is = System.in;
 	InputStreamReader isr = new InputStreamReader(is); //InputStream 입력받는 것은 System.in //System.in은 InputStream의 한 종류
