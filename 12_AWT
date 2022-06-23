@@ -16,14 +16,14 @@ Event Source: 이벤트가 발생되는 컴포넌트를 말함
 Event Listener: 이벤트 소스에서 이벤트가 발생하는지를 검사하고 있다가
                 이벤트가 발생이 되면 실제적으로 처리할 수 있도록 만든 인터페이스 =>미완성메서드 완성해 줘야함 
   ActionListener: Button에 addActionListener(Interface I) 부착
-  ItemListener: Choice에 Choice에 addItemListener(호출될 메서드 위치) 부착
+  ItemListener: Choice에 addItemListener(호출될 메서드 위치) 부착
   WindowListener: 클래스에 addWindowListener(this) 부착
          *this.addWindowListener(
             new WindowAdapter() { //필요한 추상메서드만 가져다 정의하여 쓸 수 있음
               public void windowClosing(WindowEvent e) {
                 System.out.println("창이닫힘");
                 System.exit(0);
-              }
+              )
   
 ▷Event Listener 통해서
   Button을 누르면 new ActionEvent()가 생성되고, 인터페이스의 추상메서드 자동 호출 됨
