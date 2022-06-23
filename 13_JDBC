@@ -1,0 +1,54 @@
+▶
+Main
+
+DTO Data Transfer Object
+데이터의 전달을 위해 만드는 오브젝트
+데이터를 담을 private 변수와 그 변수를 조작할 수 있는 getter, setter 메서드로 구성함
+bean 또는 VO(Value Object)라고도 함
+
+DAO Data Access Objects
+DB를 사용해 데이터를 조회하거나 조작을 전담하는 오브젝트
+DB와의 연결을 담당함
+저장소(테이블)에 데이터를 입력, 조회, 수정, 삭제 등의 처리를 함
+
+▶
+ClassNotFoundException
+forName(driver)
+1 driver 문자열에 오타가 있을 때
+2 jar파일 추가가 안되어 있을 때
+
+SQLException
+DriverManager.getConnection(url,id,pw)
+conn.prepareStatement(sql)
+ps.executeQuery()
+rs.getString("name")
+conn.close()
+
+▶
+실행명령어
+select : executeQuery()
+insert, update, delete : executeUpdate()
+
+▶
+? 위치 홀더
+
+▶
+PersonDao 객체생성하면 생성자로 1.드라이버로드
+
+pdao.getAllPerson() 호출하면 getAllPerson()정의로와서
+connect() 호출 2.계정접속
+3.
+4.
+while
+rs에 담긴 첫번째 컬럼 데이터들 setter로 PersonBean에 넣기
+PersonBean들 ArrayList<PersonBean>컬렉션에 담기
+두번째 턴..
+세번째 턴..
+
+
+
+BookMain
+
+BookBean
+
+BookDao
