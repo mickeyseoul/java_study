@@ -1,0 +1,28 @@
+▶예외처리시 무한반복 일어날때..
+변경 전)
+int price = 0;
+		do {
+			try {
+				System.out.println("price:");
+				price = sc.nextInt();
+				break;
+			}catch(InputMismatchException e) {
+				System.out.println("가격은 숫자로 입력하세요."); //무한반복 일어남
+			}
+		}while(true);
+
+변경 후)
+int price = 0;
+		do {
+			try {
+				System.out.println("price:");
+				price = sc.nextInt(); //xyz엔터
+				break;
+			}catch(InputMismatchException e) {
+				System.out.println("가격은 숫자로 입력하세요."); //while문에 Scanner넣으면 되긴 하지만 밖에서도 쓸것이기 때문에 안됨
+				sc.next(); //읽어들이고 난 뒤의 엔터를 날리기 위해서 //변수로 굳이 받을 필요없음 쓸데가 없기 때문
+			}
+		}while(true);
+    
+    
+    
