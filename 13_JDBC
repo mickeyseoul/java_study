@@ -42,7 +42,7 @@ conn.close()
 
 ▶실행명령어
 executeQuery() : select
-executeUpdate() : insert, update, delete
+executeUpdate() : insert, update, delete //성공한 레코드 수만큼 +1
 
 
 ▶
@@ -90,7 +90,7 @@ public void Connect(){
    conn = DriverManager.getConnection(url,id,pw); //SQLExeception 예외처리(2)
 }
 
-//select
+//select 조회
 public ArrayList<BookBean> getAllBook(BookBean bbean){
    //3.sql문 작성 및 
    String sql = "select * from book where no = ?"; //?: 위치 홀더
@@ -114,6 +114,8 @@ public ArrayList<BookBean> getAllBook(BookBean bbean){
 
    return lists;
 }//
+
+
 
 
 
