@@ -1,4 +1,4 @@
-▶
+▶Main/DTO/DAO 클래스
 Main
 
 DTO Data Transfer Object
@@ -11,23 +11,22 @@ DB를 사용해 데이터를 조회하거나 조작을 전담하는 오브젝트
 DB와의 연결을 담당함
 저장소(테이블)에 데이터를 입력, 조회, 수정, 삭제 등의 처리를 함
 
-▶
-ClassNotFoundException
+▶예외처리
+1) ClassNotFoundException
 forName(driver)
 1 driver 문자열에 오타가 있을 때
 2 jar파일 추가가 안되어 있을 때
 
-SQLException
+2) SQLException
 DriverManager.getConnection(url,id,pw)
 conn.prepareStatement(sql)
 ps.executeQuery()
 rs.getString("name")
 conn.close()
 
-▶
-실행명령어
-select : executeQuery()
-insert, update, delete : executeUpdate()
+▶실행명령어
+executeQuery() : select
+executeUpdate() : insert, update, delete
 
 ▶
 ? 위치 홀더
@@ -45,10 +44,26 @@ PersonBean들 ArrayList<PersonBean>컬렉션에 담기
 두번째 턴..
 세번째 턴..
 
-
-
 BookMain
 
 BookBean
 
 BookDao
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
