@@ -81,11 +81,12 @@ BookDao(){
 }
 
 public void Connect(){
+  //2. 계정 접속
   conn = DriverManager.getConnection(url,id,pw); //SQLExeception 예외처리(2)
 }
 
 
-
+//3.sql문 작성
 
 
 
