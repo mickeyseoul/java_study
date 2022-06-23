@@ -1,36 +1,4 @@
-▶Main/DTO/DAO 클래스
-Main
-
-DTO Data Transfer Object
-데이터의 전달을 위해 만드는 오브젝트
-데이터를 담을 private 변수와 그 변수를 조작할 수 있는 getter, setter 메서드로 구성함
-bean 또는 VO(Value Object)라고도 함
-
-DAO Data Access Objects
-DB를 사용해 데이터를 조회하거나 조작을 전담하는 오브젝트
-DB와의 연결을 담당함
-저장소(테이블)에 데이터를 입력, 조회, 수정, 삭제 등의 처리를 함
-
-▶예외처리
-1) ClassNotFoundException
-forName(driver)
-1 driver 문자열에 오타가 있을 때
-2 jar파일 추가가 안되어 있을 때
-
-2) SQLException
-DriverManager.getConnection(url,id,pw)
-conn.prepareStatement(sql)
-ps.executeQuery()
-rs.getString("name")
-conn.close()
-
-▶실행명령어
-executeQuery() : select
-executeUpdate() : insert, update, delete
-
 ▶
-? 위치 홀더
-
 JDBC 자바와 데이터베이스를 연결해서 하는 작업
 C:\Oracle\product\12.2.0\dbhome_1\jdbc\lib에
 oracle.jdbc.driver.OracleDriver가 안에 들어있음
@@ -39,19 +7,50 @@ oracle.jdbc.driver.OracleDriver가 안에 들어있음
 13번폴더 우클릭 - properties- java buid path- libraries- classpath -add external jars...
 C:\Oracle\product\12.2.0\dbhome_1\jdbc\lib에
 ojdbc8.jar 선택
-
 =>Referenced Libraries 생김
-
 
 localhost: 컴퓨터마다 고유의 번호가 있음 cmd창에 ipconfig
  IPv4 주소 . . . . . . . . . : 172.30.1.47
  외부에서 접속 가능하지 않은 ip주소
 
-▶
-PersonDao 객체생성하면 생성자로 1.드라이버로드
 
-pdao.getAllPerson() 호출하면 getAllPerson()정의로와서
-connect() 호출 2.계정접속
+▶DTO/DAO 클래스
+1) DTO Data Transfer Object
+데이터의 전달을 위해 만드는 오브젝트
+데이터를 담을 private 변수와 그 변수를 조작할 수 있는 getter, setter 메서드로 구성함
+bean 또는 VO(Value Object)라고도 함
+
+2) DAO Data Access Objects
+DB를 사용해 데이터를 조회하거나 조작을 전담하는 오브젝트
+DB와의 연결을 담당함
+저장소(테이블)에 데이터를 입력, 조회, 수정, 삭제 등의 처리를 함
+
+
+▶예외처리
+1) ClassNotFoundException
+forName(driver)
+ 1 driver 문자열에 오타가 있을 때
+ 2 jar파일 추가가 안되어 있을 때
+
+2) SQLException
+DriverManager.getConnection(url,id,pw)
+conn.prepareStatement(sql)
+ps.executeQuery()
+rs.getString("name")
+conn.close()
+
+
+▶실행명령어
+executeQuery() : select
+executeUpdate() : insert, update, delete
+
+
+▶
+BookDao 객체생성하면 생성자로 1.드라이버로드
+
+bdao.getAllBook() 호출하면 BookDao의 getAllBook()정의로와서
+connect() 호출 
+2.계정접속
 3.
 4.
 while
@@ -73,22 +72,48 @@ String driver = "oracle.jdbc.driver.OracleDriver";
 String url = "jdbc:oracle:thin:@localhost:1521:orcl";
 String id = " ";
 String pw = " ";
+
 Connectin conn = null;
+PreparedStatement ps = null;
+ResultSet rs = null;
+
+ArrayList<BookBean> lists = new ArrayList<BookBean>();
 
 BookDao(){
-  //1. 드라이버 로드
-  Class.forName(driver); //ClassNotFoundException 예외처리(1)
+  //0. jar 파일 가져오기
+  //1. 드라이버 로드(생성자에 만들기)
+   Class.forName(driver); //ClassNotFoundException 예외처리(1)
 }
 
 public void Connect(){
   //2. 계정 접속
-  conn = DriverManager.getConnection(url,id,pw); //SQLExeception 예외처리(2)
+   conn = DriverManager.getConnection(url,id,pw); //SQLExeception 예외처리(2)
 }
 
+//select
+public ArrayList<BookBean> getAllBook(BookBean bbean){
+   //3.sql문 작성 및 
+   String sql = "select * from book where no = ?"; //?: 위치 홀더
+   ps = conn.prepareStatement(sql); //SQLExeception 예외처리(3)
+   ps.setInt(1,"no");
 
-//3.sql문 작성
+   //4.실행
+   rs = ps.executeQuery(); //SQLExeception 예외처리(3)
+   while(ps.next()){
+      int no = rs.getInt("no"); //SQLExeception 예외처리(3)
+      String name = rs.getString("name");
 
+      BookBean bbean = new BookBean(); //while문 돌때마다 레코드 갯수만큼 bbean 생성되어..
+      bbean.setNo(no);
+      bbean.setName(name);
 
+      lists.add(bbean); // ArrayList 컬렉션으로 들어감
+   }
+
+   conn.close(); //SQLExeception 예외처리
+
+   return lists;
+}//
 
 
 
