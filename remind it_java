@@ -25,4 +25,30 @@ int price = 0;
 		}while(true);
     
     
-    
+ ▶조건 조회
+	public ArrayList<AlbumBean> getAlbumBy(String column, String word) {
+		connect();
+		
+		try {
+			String sql = "select * from album where "+column+" like ?"; //
+			ps = conn.prepareStatement(sql);
+			ps.setString(1,"%"+word+"%"); //변수를 넣음
+			
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				int no = rs.getInt("no"); //문자열을 넣음(no라고 쓰여있는 컬럼에서 가져와라)
+				String singer = rs.getString("singer");
+				String title = rs.getString("title");
+				String pub_day = String.valueOf(rs.getDate("pub_day"));
+				
+				AlbumBean abean = new AlbumBean(no,singer,title,pub_day);
+				
+				lists.add(abean);
+			}
+			
+		} catch (SQLException e) {
+			System.out.println("3");
+		}
+		return lists;
+		
+	}   
