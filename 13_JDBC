@@ -95,12 +95,12 @@ public ArrayList<BookBean> getAllBook(BookBean bbean){
    //3.sql문 작성 및 
    String sql = "select * from book where no = ?"; //?: 위치 홀더
    ps = conn.prepareStatement(sql); //SQLExeception 예외처리(3)
-   ps.setInt(1,"no");
+   ps.setInt(1,"no"); //변수: no 변수를 넣어라
 
    //4.실행
    rs = ps.executeQuery(); //SQLExeception 예외처리(3)
    while(ps.next()){
-      int no = rs.getInt("no"); //SQLExeception 예외처리(3)
+      int no = rs.getInt("no"); //SQLExeception 예외처리(3) //문자열: no이라고 쓰여있는 컬럼에서 가져와라
       String name = rs.getString("name");
 
       BookBean bbean = new BookBean(); //while문 돌때마다 레코드 갯수만큼 bbean 생성되어..
