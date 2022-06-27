@@ -65,6 +65,22 @@ int i = (int)(Math.random()*41)+5;  5~45사이의 난수를 리턴 / (45-5+1)+5
 ▶java.util 패키지: 조미료 역할
 
 ▷Stringtokenizer  구분자
+Stringtokenizer str = new Stringtokenizer("12/34 56,78:90","/ ,"); //구분자: 슬래쉬,띄어쓰기,콤마 //기본형: 띄어쓰기
+int cnt = stn.countTokens(); //4
+
+while(stn.hasMoreTokens()) { //boolean타입
+	String s = stn.nextToken(); // 항상 짝으로 사용 hasMoreToken() - nextToken()
+	System.out.println("s:"+s);
+}
+
+비교)String 클래스의 split()
+String str = "12/34 56,78:90";
+String[] arr = str.split("/"); //구분자 1개만 가능
+int cnt = arr.length;
+
+for(int i=0;i<arr.length;i++) {
+	System.out.println(arr[i]);
+}
 
 
 ▷Calendar
