@@ -14,12 +14,17 @@ String str1 = new String("Nice day"); //100번지
 String str2 = new String("Nice day"); //200번지
 System.out.println(str1==str2); //주소비교 => false
 
-.toString()  Object 클래스 메서드에 오버라이딩되어 문자열 리턴
-.length()
-.equalsIgnoreCase(String anotherString)  대소문자 구분없이 비교
+String s = str.toString()  Object 클래스 메서드에 오버라이딩되어 문자열 리턴
+int i = str.length()
 
-.contains(String st)  찾는 문자 존재하는지 boolean 리턴
-.indexOf(String str)  찾는 문자 index번호로 알려줌 // 없으면 -1 리턴
+boolean bl = str.equals(str2); //object타입 상속받음
+boolean bl = str.equalsIgnoreCase(str2)  대소문자 구분없이 비교
+
+str.toUpperCase() 대문자로 바꿔줌
+str.toLowerCase() 소문자로 바꿔줌
+
+.subString(int beginIndex, int endIndex) :beginIndex부터 endIndex전까지 문자열 리턴 beginIndex<= s <endIndex
+.subString(int beginIndex)  		 :beginIndex부터 문자열 리턴
 
 		ex)
 		String fullName = "Hello.java";
@@ -33,12 +38,10 @@ System.out.println(str1==str2); //주소비교 => false
 		System.out.println("fileName:"+fileName);
 		System.out.println("ext:"+ext);
 
-.subString(int beginIndex, int endIndex) :beginIndex부터 endIndex전까지 문자열 리턴 beginIndex<= s <endIndex
-.subString(int beginIndex)  		 :beginIndex부터 문자열 리턴
+boolean bl = str.contains("de");  :찾는 문자 존재하는지 boolean 리턴
+int i = str.indexOf("de");  	  :찾는 문자 index번호로 알려줌 // 없으면 -1 리턴
 
-.toUpperCase() 대문자로 바꿔줌
-.toLowerCase() 소문자로 바꿔줌
-.replace(CharSequence target, CharSequence replacement)  target을 replacement로 전부 바꿔줌
+str.replace(CharSequence target, CharSequence replacement)  target을 replacement로 전부 바꿔줌
 
 
 ▷Wrapper 클래스: 기본데이터 타입을 객체로 만들어야 하는 경우에 사용
