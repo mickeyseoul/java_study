@@ -27,14 +27,14 @@ System.out.println(str1==str2); //주소비교 => false
 		String ext;
 		
 		int index = fullName.indexOf('.'); //5
-		fileName = fullName.substring(0, index);
+		fileName = fullName.substring(0, index); //index전까지
 		ext = fullName.substring(index+1);
 		
 		System.out.println("fileName:"+fileName);
 		System.out.println("ext:"+ext);
 
-.subString(int beginIndex, int endIndex)  beginIndex부터 endIndex전까지 문자열 리턴 beginIndex<= s <endIndex
-.subString(int beginIndex)  beginIndex부터 문자열 리턴
+.subString(int beginIndex, int endIndex) :beginIndex부터 endIndex전까지 문자열 리턴 beginIndex<= s <endIndex
+.subString(int beginIndex)  		 :beginIndex부터 문자열 리턴
 
 .toUpperCase() 대문자로 바꿔줌
 .toLowerCase() 소문자로 바꿔줌
@@ -68,7 +68,7 @@ int i = (int)(Math.random()*41)+5;  5~45사이의 난수를 리턴 / (45-5+1)+5
 
 
 ▷Calendar
-Calendar cal = Calendar.getInstance();  //static getInstance()를 통해 객체 생성 
+Calendar cal = Calendar.getInstance();  //static getInstance()를 통해 객체 생성 //현재시간 참조해야 하기 때문
 
 cal.get(Calendar.YEAR)  // get()를 통해 호출할때 사용한 매개값은 모두 Calendar 클래스에 선언되어있는 상수
 cal.get(Calendar.MONTH) //0=1월
