@@ -1,5 +1,7 @@
-▶자바 API Application Programming Interface:
-프로그램 개발에 자주 사용되는 클래스 및 인터페이스 모음 // 라이브러리
+▶자바 API Application Programming Interface
+프로그램 개발에 자주 사용되는 클래스 및 인터페이스 모음 
+라이브러리
+자바 API 도큐먼트 https://docs.oracle.com/en/java/javase/11/docs/api/
 
 
 ▶java.lang 패키지: 가장 기본적인   *임포트 필요없음
