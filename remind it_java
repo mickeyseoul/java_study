@@ -1,3 +1,7 @@
+8_패키지
+str.length() 문자열의 길이 리턴
+arr.length 배열의 길이 리턴
+
 ▶null
 String a;
 같은 중괄호 안에서
@@ -27,19 +31,19 @@ public void setPrice(int price) {
 ▶예외처리시 무한반복 일어날때..
 변경 전)
 int price = 0;
-		do {
-			try {
-				System.out.println("price:");
-				price = sc.nextInt();
-				break;
-			}catch(InputMismatchException e) {
-				System.out.println("가격은 숫자로 입력하세요."); //무한반복 일어남
-			}
-		}while(true);
+do {
+     try {
+	System.out.println("price:");
+	price = sc.nextInt(); //xyz엔터
+	break;
+      }catch(InputMismatchException e) {
+	 System.out.println("가격은 숫자로 입력하세요."); //무한반복
+      }
+}while(true);
 
 변경 후)
 int price = 0; //중괄호 들어갈지 안들어갈지 모르니 초기화 요
-  do {
+do {
      try {
 	System.out.println("price:");
 	price = sc.nextInt(); //xyz엔터
