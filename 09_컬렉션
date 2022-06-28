@@ -27,23 +27,28 @@ Map: key/value의 pair쌍으로 이루어진 데이터값
 HashMap 순서X / key 중복X Value 중복O         //Xfor문 *확장for문 가능
 
 
-▶ArrayList   for문 / XEnumeration / OIterator
+▶ArrayList ★  
+for문 / XEnumeration / OIterator
+
 ArrayList<> list = new ArrayList<>();
 list.add(데이터);
 list.size();
 
 list.get(인덱스);
 System.out.println(list); => list 컬렉션에 존재하는 모든 요소 리턴 //list.toString() 생략형 //객체요소일 경우 각각의 번지 리턴 -> 직접 오버라이딩하여 변수출력으로 변경 가능 
-list.contains(데이터); =>boolean 리턴
-list.indexOf(데이터); =>(데이터 위치한 인덱스 리턴)데이터 없으면 -1 리턴
 
 list.add(인덱스,데이터); =>인덱스에 끼워넣기 나머지는 뒤로 밀림
 list.set(인덱스,데이터); =>인덱스에 데이터 바꿈
 
+list.contains(데이터); =>boolean 리턴
+list.indexOf(데이터); =>(데이터 위치한 인덱스 리턴)데이터 없으면 -1 리턴
+
 list.remove(데이터); =>사라지고 전체적으로 앞으로 밀림
 
 
-▶Vector   Ofor문 / OEnumeration / OIterator
+▶Vector   
+Ofor문 / OEnumeration / OIterator
+
 Vector<> v = new Vector<>();
 v.add(데이터);
 v.size();
@@ -64,7 +69,9 @@ for(it.hasNext()){
 }
 
 
-▶HashSet   Xfor문 / XEnumeration / OIterator
+▶HashSet   
+Xfor문 / XEnumeration / OIterator
+
 HashSet<> hs = new HashSet<>();
 hs.add(데이터);
 hs.size(); =>중복시 마지막이 살아남음
@@ -76,7 +83,8 @@ hs.contains(데이터);
 hs.remove(데이터);
 
 
-▶HashMap    //검색기능  //확장for문 가능***
+▶HashMap ★   
+//검색기능  //확장for문 가능***
 HashMap<K,V> hm = new HashMap<K,V>();
 hm.put(K데이터,v데이터);
 hm.size();
@@ -93,4 +101,6 @@ Set<String> s = hm.keySet(); =>모든 K데이터
 for(String x : s){
  System.out.println(hm.get(x)); =>모든 V데이터 리턴
 }
+
+
 
