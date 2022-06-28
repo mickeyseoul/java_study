@@ -11,34 +11,35 @@
 .equals(String anotherString): 문자열이 서로 같은지 boolean타입 리턴
 
 
-▷String 클래스
+▷String 클래스 ★
 String str1 = new String("Nice day"); //100번지
 String str2 = new String("Nice day"); //200번지
 System.out.println(str1==str2); //주소비교 => false
 
-String s = str.toString()  Object 클래스 메서드에 오버라이딩되어 문자열 리턴
+String s = str.toString()  //Object 클래스 메서드에 오버라이딩되어 문자열 리턴
 int i = str.length()
 
 boolean bl = str.equals(str2); //object타입 상속받음
-boolean bl = str.equalsIgnoreCase(str2)  대소문자 구분없이 비교
+boolean bl = str.equalsIgnoreCase(str2)  //대소문자 구분없이 비교
+int i = str.compareTo(str2); //같으면==0 다르면 !=0
 
 str.toUpperCase() 대문자로 바꿔줌
 str.toLowerCase() 소문자로 바꿔줌
 
-.subString(int beginIndex, int endIndex) :beginIndex부터 endIndex전까지 문자열 리턴 beginIndex<= s <endIndex
-.subString(int beginIndex)  		 :beginIndex부터 문자열 리턴
+str.subString(int beginIndex, int endIndex) :beginIndex부터 endIndex전까지 문자열 리턴 beginIndex<= s <endIndex
+str.subString(int beginIndex)  		 :beginIndex부터 문자열 리턴
 
-		ex)
-		String fullName = "Hello.java";
-		String fileName;
-		String ext;
+	ex)
+	String fullName = "Hello.java";
+	String fileName;
+	String ext;
 		
-		int index = fullName.indexOf('.'); //5
-		fileName = fullName.substring(0, index); //index전까지
-		ext = fullName.substring(index+1);
+	int index = fullName.indexOf('.'); //5
+	fileName = fullName.substring(0, index); //index전까지
+	ext = fullName.substring(index+1);
 		
-		System.out.println("fileName:"+fileName);
-		System.out.println("ext:"+ext);
+	System.out.println("fileName:"+fileName);
+	System.out.println("ext:"+ext);
 
 boolean bl = str.contains("de");  :찾는 문자 존재하는지 boolean 리턴
 int i = str.indexOf("de");  	  :찾는 문자 index번호로 알려줌 // 없으면 -1 리턴
@@ -78,7 +79,7 @@ while(stn.hasMoreTokens()) { //boolean타입
 	System.out.println("s:"+s);
 }
 
-비교)String 클래스의 split()
+비교)String 클래스의 split() ★
 String str = "12/34 56,78:90";
 String[] arr = str.split("/"); //구분자 1개만 가능
 int cnt = arr.length;
